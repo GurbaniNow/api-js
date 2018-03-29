@@ -1,5 +1,3 @@
-export const API_URL = `https://api.gurbaninow.com/v2/`;
-
 export const TYPES = [
 	'First Letter Start (Gurmukhi/Unicode)',
 	'First Letter Anywhere (Gurmukhi/Unicode)',
@@ -34,6 +32,7 @@ export const buildApiUrl = options => {
 		hukam = false,          // Boolean: Pass true if you want hukamnama of today.
 		unicode = false,        // Boolean: Pass true to convert query string (GurbaniAkhar) into unicode text.
 		akhar = false,          // Boolean: Pass true to convert query string (Unicode) into GurbaniAkhar text.
+		API_URL = 'https://api.gurbaninow.com/v2/', // String: API_URL to hit.
 	} = options;
 	let url = API_URL;
 	if (q !== false) {

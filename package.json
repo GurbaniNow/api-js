@@ -1,6 +1,6 @@
 {
 	"name": "gurbaninow",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A JavaScript Wrapper for the GurbaniNow API",
 	"main": "index.js",
 	"scripts": {
@@ -18,14 +18,14 @@
 	},
 	"homepage": "https://github.com/GurbaniNow/gurbaninowapi-js",
 	"devDependencies": {
-		"babel-core": "^6.23.1",
-		"babel-loader": "^6.4.0",
-		"babel-preset-env": "^1.2.1",
-		"webpack": "^2.2.1"
+		"@babel/core": "^7.0.0-beta.40",
+		"@babel/preset-env": "^7.0.0-beta.40",
+		"babel-loader": "^8.0.0-beta.0",
+		"webpack": "^3.11.0"
 	},
 	"babel": {
 		"presets": [
-			"env"
+			"@babel/preset-env"
 		]
 	}
 }
