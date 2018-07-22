@@ -1,5 +1,5 @@
-# khajana-js 💎
+# GurbaniNow-JS 💎
 
-Webpage Demo of khajana-js.
+Webpage Demo
 
 ![Demo](./demo.png)
