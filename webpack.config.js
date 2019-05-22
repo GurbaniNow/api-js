@@ -1,17 +1,26 @@
-const path = require('path');
+const path = require( 'path' )
 
 module.exports = {
-	entry: path.resolve(__dirname, "src", "index.js"),
-	output: {
-		filename: "index.js",
-		path: __dirname,
-		library: "GurbaniNow",
-		libraryTarget: "umd",
-	},
-	module: {
-		rules: [{
-			test: /\.js$/,
-			loaders: [ "babel-loader" ]
-		}]
-	}
+  mode: 'production',
+  entry: './index.js',
+  output: {
+    filename: 'index.min.js',
+    path: path.resolve( __dirname, 'dist' ),
+    libraryTarget: 'umd',
+    globalObject: 'this',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [ '@babel/preset-env' ],
+          },
+        },
+      },
+    ],
+  },
 }

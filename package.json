@@ -1,31 +1,69 @@
 {
 	"name": "gurbaninow",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"description": "A JavaScript Wrapper for the GurbaniNow API",
-	"main": "index.js",
+  "main": "dist/index.min.js",
+  "unpkg": "dist/index.min.js",
 	"scripts": {
-		"test": "echo \"Error: No Test Specified\" && exit 1",
-		"build": "webpack -p"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "build-docs": "jsdoc2md --template README.hbs lib/**/*.js > README.md &&  markdown-toc -i README.md ",
+    "lint": "eslint .",
+    "precommit": "npm run lint && npm run build-docs && git add README.md",
+    "release": "release-it"
 	},
-	"author": "gurbaninow",
+  "pre-commit": [
+    "precommit"
+  ],
+	"author": "GurbaniNow Dev Team <contact@gurbaninow.com> (https://gurbaninow.com)",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/GurbaniNow/gurbaninowapi-js"
+		"url": "git+https://github.com/GurbaniNow/api-js"
 	},
 	"bugs": {
-		"url": "https://github.com/GurbaniNow/gurbaninowapi-js/issues"
+		"url": "https://github.com/GurbaniNow/api-js/issues"
 	},
-	"homepage": "https://github.com/GurbaniNow/gurbaninowapi-js",
-	"devDependencies": {
-		"@babel/core": "^7.0.0-beta.40",
-		"@babel/preset-env": "^7.0.0-beta.40",
-		"babel-loader": "^8.0.0-beta.0",
-		"webpack": "^3.11.0"
-	},
-	"babel": {
-		"presets": [
-			"@babel/preset-env"
-		]
-	}
+	"homepage": "https://github.com/GurbaniNow/api-js",
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "babel-loader": "^8.0.6",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.11.1",
+    "jsdoc-to-markdown": "^5.0.0",
+    "markdown-toc": "^1.2.0",
+    "pre-commit": "^1.2.2",
+    "release-it": "^12.0.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "release-it": {
+    "scripts": {
+      "beforeStage": "npm run build"
+    },
+    "github": {
+      "release": true,
+      "assets": [
+        "dist/index.min.js"
+      ]
+    }
+  },
+  "keywords": [
+    "sikhi",
+    "sikhism",
+		"sikh",
+		"gurbani",
+		"bani",
+		"gurbaninow",
+		"api",
+		"shabados",
+    "gurmukhi"
+  ],
+  "directories": {
+    "lib": "lib"
+  }
 }
