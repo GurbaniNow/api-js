@@ -9,6 +9,7 @@ A JavaScript Wrapper for the [GurbaniNow API](https://github.com/GurbaniNow/api)
 [![GitHub issues](https://img.shields.io/github/issues/GurbaniNow/api-js.svg?style=flat-square)](https://github.com/GurbaniNow/api-js/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/GurbaniNow/api-js.svg?style=flat-square)](https://github.com/GurbaniNow/api-js/pulls)
 [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/gurbaninow/badge)](https://www.jsdelivr.com/package/npm/gurbaninow)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FGurbaniNow%2Fapi-js.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FGurbaniNow%2Fapi-js?ref=badge_shield)
 
 ## Contents
 
@@ -89,3 +90,7 @@ The general workflow for contributing:
 - Add JSDoc function documentation and examples.
 - Run tests with `npm test` and ensure they all pass. Testing is done with the `mocha` testing framework.
 - Create a pull request with the changes.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FGurbaniNow%2Fapi-js.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FGurbaniNow%2Fapi-js?ref=badge_large)
