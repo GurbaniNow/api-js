@@ -1,30 +1,33 @@
 {
-	"name": "gurbaninow",
-	"version": "2.0.0",
-	"description": "A JavaScript Wrapper for the GurbaniNow API",
+  "name": "gurbaninow",
+  "version": "2.0.0",
+  "description": "A JavaScript Wrapper for the GurbaniNow API",
   "main": "dist/index.min.js",
   "unpkg": "dist/index.min.js",
-	"scripts": {
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "build-docs": "jsdoc2md --template README.hbs lib/**/*.js > README.md &&  markdown-toc -i README.md ",
     "lint": "eslint .",
     "precommit": "npm run lint && npm run build-docs && git add README.md",
     "release": "release-it"
-	},
+  },
   "pre-commit": [
     "precommit"
   ],
-	"author": "GurbaniNow Dev Team <contact@gurbaninow.com> (https://gurbaninow.com)",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/GurbaniNow/api-js"
-	},
-	"bugs": {
-		"url": "https://github.com/GurbaniNow/api-js/issues"
-	},
-	"homepage": "https://github.com/GurbaniNow/api-js",
+  "author": "GurbaniNow Dev Team <contact@gurbaninow.com> (https://gurbaninow.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GurbaniNow/api-js"
+  },
+  "bugs": {
+    "url": "https://github.com/GurbaniNow/api-js/issues"
+  },
+  "homepage": "https://github.com/GurbaniNow/api-js",
+  "dependencies": {
+    "cross-fetch": "^3.0.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.1.5",
     "@babel/preset-env": "^7.1.5",
@@ -55,12 +58,12 @@
   "keywords": [
     "sikhi",
     "sikhism",
-		"sikh",
-		"gurbani",
-		"bani",
-		"gurbaninow",
-		"api",
-		"shabados",
+    "sikh",
+    "gurbani",
+    "bani",
+    "gurbaninow",
+    "api",
+    "shabados",
     "gurmukhi"
   ],
   "directories": {
